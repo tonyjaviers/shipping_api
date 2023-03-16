@@ -1,6 +1,6 @@
 # README
 
-Clone the project repository to your local machine using git clone https://github.com/your-username/shipping-app.git.
+Clone the project repository to your local machine using git clone https://github.com/tonyjaviers/shipping_api.
 
 Install Ruby and RubyGems on your local machine if you haven't already done so.
 
