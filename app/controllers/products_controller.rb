@@ -49,10 +49,10 @@ class ProductsController < ApplicationController
     def find_by_dimensions
       
       # Get the maximum dimensions of the package
-      package_length = params[:length] + 1
-      package_width = [params[:width], params[:height]].max + 1
-      package_height = [params[:width], params[:height].min + params[:height] + 1
-      package_weight = params[:weight] + 1
+      package_length = params[:length].to_i + 1
+      package_width = [params[:width].to_i, params[:height].to_i].max + 1
+      package_height = [params[:width].to_i, params[:height].to_i].min + params[:height].to_i + 1
+      package_weight = params[:weight].to_i + 1
       
       # Search for a package that can fit the product
       product = Product.where(:length.gte => package_length, :width.gte => package_width, :height.gte => package_height, :weight.gte => package_weight).first
