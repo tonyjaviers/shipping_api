@@ -62,7 +62,7 @@ class ProductsController < ApplicationController
         return { message: "No package found for dimensions #{length}x#{width}x#{height} and weight #{weight} lbs." }
       else
         # Package found
-        return product.to_json
+        render json: product
       end
       
     end
